@@ -1,0 +1,599 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fraunces', serif;
+    text-align: center; 
+    
+    
+}
+
+/* typography */
+
+h1{
+    margin-top: 3rem;
+    text-align: center;
+    letter-spacing: 6.25px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 .25em;
+}
+
+h2{
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 39.46px;
+    letter-spacing: -.23px;
+    margin-bottom: 0;
+    margin-top: 4.5rem;
+    
+}
+
+p{
+    font-size: 1.125rem;
+    color: #808397;
+}
+
+
+.brand h2 {
+    line-height: 39.46px;
+    letter-spacing: -0.23px;
+    
+}
+
+.brand p {
+    font-family: Barlow;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 30px;
+    letter-spacing: -0.13px;
+    
+}
+
+
+.audience h2 {
+    line-height: 39.46px;
+    letter-spacing: -0.23px;
+}
+
+.audience p {
+    font-family: Barlow;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 30px;
+    letter-spacing: -0.13px;
+}
+
+
+.design-text h2{
+    margin-bottom: 2rem;
+}
+
+.design-text p {
+    font-family: Barlow;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: -0.11px
+    color: #24554A;
+    margin-bottom: 2.5rem;
+}
+
+
+.photo h2 {
+    margin-bottom: 2rem;
+}
+
+.photo-text p {
+    font-family: Barlow;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing :-0.11px;
+    color: #19536C;
+    margin-bottom: 3.5rem;
+}
+
+.testimonials h2 {
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 19.73px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+    color: #A7AAAD;
+}
+
+.testimonials p {
+    font-family: Barlow;
+    font-size: 1.125rem;
+    line-height: 32px;
+    letter-spacing: -0.13px;
+}
+
+.testimonials h3 {
+    margin-bottom: 0;
+}
+
+.testimonials .title {
+    font-family: Barlow;
+    font-size: .875rem;
+    font-weight: 600px;
+    line-height: 25px;
+    letter-spacing: -0.1px;
+    margin-top: .5em;
+    margin-bottom: 4rem;
+}
+
+.learn-more {
+    margin-bottom: 4.5rem;
+}
+
+/* layout */
+
+/* Hero section (Top) */
+
+.top{
+    height: 100vh;
+    padding: 2.5rem;
+    background-image: url(images/mobile/image-header.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.top header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top header a {
+    text-decoration: none;
+}
+
+.top header a img {
+    width: 8rem;
+}
+
+
+.top header nav ul {
+    display: none;
+}
+
+
+/* Mobile Nav dropdown */
+
+
+.mobile-nav{
+    display: none;
+}
+
+.mobile-nav.show{
+    display: block;
+    position: fixed;
+    left: 50%;
+    top: 5rem;
+    transform: translateX(-50%);
+    background: hsl(46, 55%, 94%);
+    text-align: center;
+    padding: 1rem;
+    z-index: 10;
+    width: 90%;
+}
+
+.mobile-nav.show::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -1.2rem;
+    border-top: .6rem solid transparent;
+    border-bottom: .6rem solid hsl(46, 55%, 94%);
+    border-left: .6rem solid transparent;
+    border-right: .6rem solid hsl(46, 55%, 94%);
+}
+
+.mobile-nav.show nav ul li{
+    display: block;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.mobile-nav.show nav ul li:nth-child(4){
+    margin-bottom: 0;
+}
+
+.mobile-nav.show nav ul li:nth-child(4) a{
+    padding: .8rem 1rem;
+    text-transform: uppercase;
+    background: hsl(51, 100%, 49%);
+    border-radius: 3rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.mobile-nav.show nav ul li a{
+    text-decoration: none;
+    color: hsl(198, 62%, 26%);
+    font-family: Barlow;
+}
+
+
+/* Transform brand learn more link */
+
+.brand a {
+    text-decoration: none;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: .5rem;
+    position: relative;
+    cursor: pointer;
+    font-family: Fraunces;
+    
+    
+}
+
+.brand a::before{
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: hsla(51, 100%, 49%, .404);
+    z-index: -1;
+    border-radius: .5rem;
+}
+
+/* Stand out audience learn more link */
+
+.audience a {
+    text-decoration: none;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: .5rem;
+    position: relative;
+    cursor: pointer;
+    font-family: Fraunces;
+}
+
+.audience a::before {
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: hsla(7, 99%, 70%, .493);
+    z-index: -1;
+    border-radius: .5rem;
+}
+
+/* background images */
+
+.egg{
+    background-image: url(images/mobile/image-transform.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+    padding: 0 .25em;
+   
+}
+
+.cup{
+    background-image: url(images/mobile/image-stand-out.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+    padding: 0 .25em;
+}
+
+.design{
+    background-image: url(images/mobile/image-graphic-design.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 75vh;
+    padding: 0 .25em;
+    position: relative;
+
+    
+}
+
+.photo{
+    background-image: url(images/mobile/image-photography.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 75vh;
+    padding: 0 .25em;
+    position: relative;
+    
+}
+
+/* text containers */
+
+.brand{
+    max-width: 327px;
+    min-height: 40vh;
+    padding: 0 1em;
+    margin: 0 auto;
+    
+    
+}
+
+.design-text {
+    max-width: 327px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #24554A;
+    padding: 0 .25em;
+    
+}
+
+.photo-text{
+    max-width: 327px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    color: #19536C;
+}
+
+.audience{
+    max-width: 327px;
+    min-height: 40vh;
+    padding: 0 1em;
+    margin: 0 auto;
+
+}
+
+
+.testimonials {
+    max-width: 327px;
+    margin: 0 auto;
+}
+
+/* testimonial image */
+
+.testimonial-image{
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+}
+
+/* image gallery (mobile) */
+
+.pics img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pics {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* footer */
+
+.foot-container{
+    min-height: 40vh;
+    background-color: #90D4C6;
+    
+    
+}
+
+.foot{
+    max-width: 279px;
+    margin: 0 auto;
+    
+}
+
+.footer-logo{
+    color: #2C7566;
+    margin-top: 3.5rem;
+    max-width: 170px;
+    max-height: 33px;
+    filter: invert(45%) sepia(22%) saturate(790%) hue-rotate(118deg) brightness(95%) contrast(92%);
+    
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    
+}
+
+.footer-list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 .25em;
+    
+}
+
+.footer-list li {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0 .25em;
+}
+
+
+.footer-list a {
+    text-decoration: none;
+    color: #2C7566;
+    
+}
+
+.footer-list a:hover, .footer-list a:focus {
+    color: #fff;
+}
+
+.social-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    
+}
+
+.social-list a:hover, .social-list a:focus {
+    filter: brightness(0) invert(1);
+}
+
+
+
+/* media queries */
+
+@media(min-width: 625px) {
+
+    /* desktop layout background image */
+.top{
+        height: 100vh;
+        padding: 2.5rem;
+        background-image: url(images/desktop/image-header.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+
+.egg{
+        background-image: url(images/desktop/image-transform.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 40vh;
+        padding: 0 .25em;
+       
+    }
+
+.cup{
+        background-image: url(images/desktop/image-stand-out.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 40vh;
+        padding: 0 .25em;
+    }
+/* mobilenav */
+
+.mobile-menu {
+    display: none;
+}
+    
+.mobile-nav.show{
+
+    display: none;
+    
+}
+
+/* desktop navigation */
+
+.top header nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+    
+.top header nav ul li {
+        margin: 0 1.2rem;
+    }
+    
+ .top header nav ul li:nth-child(4) {
+        margin-right: 0;
+    }
+    
+  .top header nav ul li a {
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        cursor: pointer;
+        font-family: Barlow;
+    }
+    
+  .top header nav ul li:nth-child(4) a{
+        padding: .7em 1rem;
+        color: hsl(212, 27%, 19%);
+        background: hsl(0, 0%, 100%);
+        border-radius: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: 3ms;
+        font-family: Fraunces;
+        font-size: .8rem;
+    }
+    
+ .top header nav ul li:nth-child(4) a:hover{
+        background: hsla(0,0%, 100%, .37);
+        color: hsl(0, 0%, 100%);
+    }
+
+    /* desktop layout main content */
+
+ .egg-container{
+        
+        display: flex;
+        flex-direction: row-reverse;
+
+        
+    }
+
+.egg {
+        display: flex;
+        width: 50%;
+    }
+
+.brand {
+        width: 50%
+    }
+
+
+.cup-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       
+        
+    }
+
+.flex-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+.testimonials {
+        max-width: 100%;
+    }
+
+.testimonials-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 3rem;
+        
+    }
+
+.pics {
+        display: flex;
+
+    }
+
+.image-grid{
+        width: 100%
+    }
+
+}
+
+
